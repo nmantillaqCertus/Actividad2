@@ -14,6 +14,10 @@
 
     <!--Inicio Estilos tipo Interno-->
     <style>
+        .textoCentrado {
+            text-align: center !important;
+        }
+        
         .h3Cesar {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-style: oblique;
@@ -44,6 +48,21 @@
         #imgCard {
             width: 170px;
             height: 200px;
+        }
+        
+        .nuevaSeccion {
+            background: rgb(204, 80, 43);
+            background: linear-gradient(29deg, rgba(131, 58, 180, 0.6786064767703957) 0%, rgba(253, 29, 29, 0.7906512946975666) 50%, rgba(252, 176, 69, 0.18841039833902307) 100%);
+            border-radius: 10px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+            color: white;
+            padding: 3%;
+        }
+        
+        .sombraCard {
+            background: rgb(204, 80, 43) !important;
+            background: linear-gradient(29deg, rgba(131, 58, 180, 0.6786064767703957) 0%, rgba(253, 29, 29, 0.7906512946975666) 50%, rgba(252, 176, 69, 0.18841039833902307) 100%) !important;
+            color: white !important;
         }
     </style>
     <!--Fin  Estilos tipo Interno-->
@@ -172,7 +191,7 @@
             <div class="row">
                 <!--Inicio Primer Tajeta-->
                 <div class="col">
-                    <div class="card mb-3">
+                    <div class="card mb-3 sombraCard">
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img id="imgCard" src="https://i3.wp.com/tiempodenegocios.com/wp-content/uploads/2019/05/5798-750x406.jpg" alt="Imgen Uno">
@@ -191,7 +210,7 @@
 
                 <!--Inicio Segunda Tarjeta-->
                 <div class="col">
-                    <div class="card mb-3">
+                    <div class="card mb-3 sombraCard">
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img id="imgCard" src="https://i3.wp.com/tiempodenegocios.com/wp-content/uploads/2019/05/5798-750x406.jpg" alt="Imgen Dos">
@@ -212,6 +231,62 @@
             </div>
             <!--Fin Tarjetas-->
 
+            <p class="lead textoCentrado">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <hr>
+
+            <!--Inicio Nueva Seccion-->
+            <div class="nuevaSeccion  lead">
+
+                <h3 class="textoCentrado">Historias</h3>
+
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Fin Nueva Sección -->
+
+            <hr>
+
+            <!--Inicio Seccion Formulario-->
+            <div class="form textoCentrado">
+
+                <div>
+                    <label for="nombre">Nombres</label>
+                    <input id="nombre" type="text">
+                    <br>
+                    <label for="edad"> Edad</label>
+                    <input id="edad" type="number">
+                    <br>
+
+                </div>
+                <br>
+
+                <div>
+                    <button class="btn btn-sm btn-success" onclick="mostarAlert()"> Guardar</button>
+                </div>
+
+            </div>
+            <!--Fin Seccion Formulario-->
+
         </div>
 
     </div>
@@ -219,6 +294,22 @@
 
     <script src="../resources/Bootstrap/jquery-3.5.1.slim.min.js"></script>
     <script src="../resources/Bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /*Inicializar Variables*/
+        var vNombre = "";
+        var vEdad = 0;
+
+        /*Establecer Variables*/
+        vNombre = "César Mantilla";
+        vEdad = 30;
+
+
+
+        function mostarAlert() {
+            alert("Hola " + vNombre + ", tengo " + vEdad + " años.");
+        }
+    </script>
 
 </body>
 
