@@ -267,21 +267,36 @@
             <hr>
 
             <!--Inicio Seccion Formulario-->
-            <div class="form textoCentrado">
+            <div class=" " style="padding-left: 15%; padding-right: 15%;">
 
+                <h3 class="textoCentrado">Contacto</h3>
+
+                <!--Inicio del formulario-->
                 <div>
-                    <label for="nombre">Nombres</label>
-                    <input id="nombre" type="text">
-                    <br>
-                    <label for="edad"> Edad</label>
-                    <input id="edad" type="number">
-                    <br>
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombres</label>
+                            <input class="form-control" id="nombre" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" id="email" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono"> Teléfono</label>
+                            <input class="form-control" id="telefono" type="number">
+                        </div>
+                    </form>
 
                 </div>
+                <!--Fin del formulario-->
+
                 <br>
 
                 <div>
-                    <button class="btn btn-sm btn-success" onclick="mostarAlert()"> Guardar</button>
+                    <button class="btn btn-sm btn-success" onclick="mostarAlert() "> Enviar</button>
                 </div>
 
             </div>
@@ -298,16 +313,20 @@
     <script>
         /*Inicializar Variables*/
         var vNombre = "";
-        var vEdad = 0;
-
-        /*Establecer Variables*/
-        vNombre = "César Mantilla";
-        vEdad = 30;
-
+        var vEmail = "";
+        var vTelefono = 0;
 
 
         function mostarAlert() {
-            alert("Hola " + vNombre + ", tengo " + vEdad + " años.");
+
+            /*Establecer Variables*/
+            vNombre = document.getElementById("nombre").value;
+            vEmail = document.getElementById("email").value;
+            vTelefono = document.getElementById("telefono").value;
+
+
+            alert("Hola " + vNombre + ", te estaremos respondiendo al siguiente correo " + vEmail + " o espera nuestra llamada al n° " + vTelefono);
+
         }
     </script>
 
